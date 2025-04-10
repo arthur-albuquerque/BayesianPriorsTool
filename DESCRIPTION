@@ -1,0 +1,14 @@
+Package: BayesianPriorsTool
+Title: Tools for Prior Elicitation in Bayesian Meta-Analysis
+Version: 0.1.0
+Authors@R: person("Arthur", "M. Albuquerque", email = "arthur_albuquerque1@yahoo.com", role = c("aut", "cre"))
+Maintainer: Arthur M. Albuquerque <arthur_albuquerque1@yahoo.com>
+Description: Provides functions to compute standard deviations and
+    generate plots for weakly informative priors in Bayesian
+    random-effects meta-analysis models, aiding prior elicitation
+    for the overall effect parameter (mu).
+License: MIT + file LICENSE
+Encoding: UTF-8
+RoxygenNote: 7.2.3
+Imports: 
+    stats
