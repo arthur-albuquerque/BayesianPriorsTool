@@ -12,3 +12,5 @@ Encoding: UTF-8
 RoxygenNote: 7.2.3
 Imports: 
     stats
+URL: https://github.com/arthur-albuquerque/BayesianPriorsTool
+BugReports: https://github.com/arthur-albuquerque/BayesianPriorsTool/issues
