@@ -1,16 +1,21 @@
 Package: BayesianPriorsTool
 Title: Tools for Prior Elicitation in Bayesian Meta-Analysis
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: person("Arthur", "M. Albuquerque", email = "arthur_albuquerque1@yahoo.com", role = c("aut", "cre"))
 Maintainer: Arthur M. Albuquerque <arthur_albuquerque1@yahoo.com>
 Description: Provides functions to compute standard deviations and
     generate plots for weakly informative priors in Bayesian
     random-effects meta-analysis models, aiding prior elicitation
-    for the overall effect parameter (mu).
+    for the overall effect parameter (mu) and heterogeneity parameter (tau).
 License: MIT + file LICENSE
 Encoding: UTF-8
 RoxygenNote: 7.2.3
 Imports: 
-    stats
+    stats,
+    ggplot2 (>= 3.4.4),
+    ggdist (>= 0.5.0),
+    distributional (>= 0.4.0),
+    extraDistr (>= 1.9.1),
+    patchwork (>= 1.2.0)
 URL: https://github.com/arthur-albuquerque/BayesianPriorsTool
 BugReports: https://github.com/arthur-albuquerque/BayesianPriorsTool/issues
