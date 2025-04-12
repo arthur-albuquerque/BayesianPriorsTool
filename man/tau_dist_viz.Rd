@@ -10,8 +10,7 @@ tau_dist_viz(
   meanlog = NULL,
   sdlog = NULL,
   degrees_f = NULL,
-  fill_color = "#D1A14F",
-  text_color = "black"
+  fill_color = "#D1A14F"
 )
 }
 \arguments{
@@ -32,9 +31,6 @@ ignored for half-normal and log-normal).}
 
 \item{fill_color}{Character string specifying the fill color for the 95% probability area
 (default: "#D1A14F", a light orange).}
-
-\item{text_color}{Character string specifying the color of the text annotation for the 95%
-probability (default: "black").}
 }
 \value{
 A `ggplot2` object displaying the distribution with annotated statistics.

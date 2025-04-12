@@ -25,8 +25,6 @@
 #'   ignored for half-normal and log-normal).
 #' @param fill_color Character string specifying the fill color for the 95% probability area
 #'   (default: "#D1A14F", a light orange).
-#' @param text_color Character string specifying the color of the text annotation for the 95%
-#'   probability (default: "black").
 #' @return A `ggplot2` object displaying the distribution with annotated statistics.
 #' @importFrom stats qlnorm qnorm qt dlnorm dt
 #' @importFrom ggplot2 ggplot aes geom_area geom_line geom_vline annotate labs scale_x_continuous coord_cartesian theme element_text element_blank
@@ -44,14 +42,13 @@ tau_dist_viz <- function(dist = c("half-normal", "log-normal", "log-t"),
                          meanlog = NULL,
                          sdlog = NULL,
                          degrees_f = NULL,
-                         fill_color = "#D1A14F",
-                         text_color = "black") {
+                         fill_color = "#D1A14F") {
   # Match distribution argument
   dist <- match.arg(dist)
 
   # Input validation
-  if (!is.character(fill_color) || !is.character(text_color)) {
-    stop("`fill_color` and `text_color` must be character strings.")
+  if (!is.character(fill_color)) {
+    stop("`fill_color` must be a character string.")
   }
 
   # Distribution-specific validation and density functions
