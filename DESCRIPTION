@@ -1,6 +1,6 @@
 Package: BayesianPriorsTool
 Title: Tools for Prior Elicitation in Bayesian Meta-Analysis
-Version: 0.2.1
+Version: 0.2.2
 Authors@R: person("Arthur", "M. Albuquerque", email = "arthur_albuquerque1@yahoo.com", role = c("aut", "cre"))
 Maintainer: Arthur M. Albuquerque <arthur_albuquerque1@yahoo.com>
 Description: Provides functions to compute standard deviations and

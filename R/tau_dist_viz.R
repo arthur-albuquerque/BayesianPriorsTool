@@ -61,7 +61,7 @@ tau_dist_viz <- function(dist = c("half-normal", "log-normal", "log-t"),
     dens_func <- function(x) extraDistr::dhnorm(x, sigma = scale)
     prob_func <- function(x) extraDistr::phnorm(x, sigma = scale)
     quant_func <- function(p) extraDistr::qhnorm(p, sigma = scale)
-    dist_label <- paste0("Half-Normal(", round(scale, 2), ")")
+    dist_label <- paste0("Half-Normal(", scale, ")")
   } else if (dist == "log-normal") {
     if (is.null(meanlog) || is.null(sdlog)) stop("`meanlog` and `sdlog` are required for log-normal distribution.")
     if (!is.numeric(meanlog)) stop("`meanlog` must be numeric.")
@@ -69,7 +69,7 @@ tau_dist_viz <- function(dist = c("half-normal", "log-normal", "log-t"),
     dens_func <- function(x) stats::dlnorm(x, meanlog = meanlog, sdlog = sdlog)
     prob_func <- function(x) stats::plnorm(x, meanlog = meanlog, sdlog = sdlog)
     quant_func <- function(p) stats::qlnorm(p, meanlog = meanlog, sdlog = sdlog)
-    dist_label <- paste0("Log-Normal(", round(meanlog, 2), ", ", round(sdlog, 2), ")")
+    dist_label <- paste0("Log-Normal(", meanlog, ", ", sdlog, ")")
   } else if (dist == "log-t") {
     if (is.null(meanlog) || is.null(scale) || is.null(degrees_f)) {
       stop("`meanlog`, `scale`, and `degrees_f` are required for log-Student's t distribution.")
@@ -80,7 +80,7 @@ tau_dist_viz <- function(dist = c("half-normal", "log-normal", "log-t"),
     dens_func <- function(x) stats::dt((log(x) - meanlog) / scale, df = degrees_f) / (x * scale)
     prob_func <- function(x) stats::pt((log(x) - meanlog) / scale, df = degrees_f)
     quant_func <- function(p) exp(meanlog + scale * stats::qt(p, df = degrees_f))
-    dist_label <- paste0("Log-t(", round(meanlog, 2), ", ", round(scale, 2), ", ", round(degrees_f, 2), ")")
+    dist_label <- paste0("Log-t(", meanlog, ", ", scale, ", ", degrees_f, ")")
   }
 
   # Generate x-axis and density
